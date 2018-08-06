@@ -36,10 +36,12 @@ module.exports = function(data, options, success, fail) {
   var actionArgs = prepareArgs(spec);
 
   // Prepare base64 string
-  data = data.replace(/data:image\/png;base64,/, '');
+  // Commented out by cheeroke
+  //data = data.replace(/data:image\/png;base64,/, '');
+  data1 = data.result.split(',')[1];
 
   // And add it to the Service's Action arguments
-  actionArgs.unshift(data);
+  actionArgs.unshift(data1);
 
   return exec(ok(success), error(fail), SERVICE, ACTION, actionArgs);
 };
