@@ -38,6 +38,7 @@ module.exports = function(data, options, success, fail) {
   // Prepare base64 string
   // Commented out by cheeroke
   //data = data.replace(/data:image\/png;base64,/, '');
+  //  below does not seems to have any effect...
   data1 = data.result.split(',')[1];
 
   // And add it to the Service's Action arguments
